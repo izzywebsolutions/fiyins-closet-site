@@ -1,0 +1,138 @@
+:root{
+    --peach: #FFDAB9;
+    --peach-dark: #FFD1B3;
+    --accent: #6B3A2A;
+    --muted: #6f5845;
+    --white: #ffffff;
+    --whatsapp: #25D366;
+    --max-width: 1100px;
+    --radius: 12px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    color:var(--muted);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
+  a{color:inherit; text-decoration:none}
+  .container{max-width:var(--max-width); margin:0 auto; padding:0 20px;}
+  
+  /* Header */
+  .site-header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.95); backdrop-filter: blur(6px);
+    border-bottom:1px solid #f0e6e3;
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; height:72px;}
+  .brand{display:flex; align-items:center; gap:14px}
+  .logo{height:52px; width:52px; object-fit:cover; border-radius:10px}
+  .brand-text h1{margin:0; font-family:"Playfair Display",serif; font-size:20px; color:var(--accent)}
+  .tag{margin:0; font-size:12px; color:#8b6b56}
+  .main-nav{display:flex; align-items:center; gap:12px}
+  .nav-toggle{display:none; background:transparent; border:none; cursor:pointer; padding:8px}
+  .hamburger{width:26px; height:2px; background:var(--muted); display:block; position:relative}
+  .hamburger::before,.hamburger::after{content:""; position:absolute; left:0; right:0; height:2px; background:var(--muted)}
+  .hamburger::before{top:-8px} .hamburger::after{top:8px}
+  
+  .nav-menu{display:flex; gap:18px; list-style:none; margin:0; padding:0; align-items:center}
+  .nav-menu a{font-weight:600; font-size:14px; color:var(--muted)}
+  
+  /* Header socials */
+  .header-socials{display:flex; gap:8px}
+  .social-icon{display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px; background:#fff; border:1px solid #f3e7e4; font-weight:700; color:var(--accent)}
+  
+  /* Hero */
+  .hero{padding:40px 0 60px; background:linear-gradient(180deg, rgba(255,250,248,1) 0%, rgba(255,245,240,1) 100%);}
+  .hero-inner{display:flex; gap:30px; align-items:center}
+  .hero-left{flex:1}
+  .hero-title{font-family:"Playfair Display", serif; font-size:36px; margin:0 0 10px; color:var(--accent)}
+  .hero-sub{margin:0 0 20px; color:#7b5a48; font-size:18px; max-width:720px}
+  .cta-row{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+  .btn{display:inline-block; padding:12px 18px; border-radius:10px; font-weight:600}
+  .btn-primary{background:var(--peach); color:var(--accent); border:2px solid rgba(0,0,0,0.04)}
+  .btn-outline{background:transparent; border:2px solid var(--accent); color:var(--accent)}
+  
+  .hero-right{flex:0 0 420px; display:flex; justify-content:flex-end}
+  .hero-image{width:380px; height:260px; border-radius:14px; overflow:hidden; box-shadow:0 6px 30px rgba(107,58,42,0.08)}
+  .hero-image img{width:100%; height:100%; object-fit:cover; display:block}
+  
+  /* Sections */
+  .section{padding:48px 0}
+  .section-title{font-family:"Playfair Display",serif; font-size:22px; margin:0 0 18px; color:var(--accent)}
+  .lead{color:#7b5a48}
+  .lead-small{color:#7b5a48; margin-bottom:14px}
+  
+  /* Services */
+  .services-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px}
+  .card{background:#fff; border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.04); border:1px solid #f4e9e6}
+  .card h4{margin:0 0 8px; color:var(--accent)}
+  .card p{margin:0; color:#7b5a48; font-size:14px}
+  
+  /* Gallery */
+  .gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px}
+  .gallery-grid img{width:100%; display:block; height:140px; object-fit:cover; border-radius:10px; cursor:pointer; transition:transform .18s ease}
+  .gallery-grid img:hover{transform:scale(1.03)}
+  
+  /* Testimonials */
+  .test-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px}
+  .testimonial{background:linear-gradient(180deg,var(--white),#fff); padding:18px; border-radius:12px; border:1px solid #f3e7e4; box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+  .testimonial p{margin:0 0 10px; font-style:italic; color:#6b5646}
+  .who{font-weight:600; color:var(--accent); font-size:14px}
+  
+  /* Find Us icons */
+  .find-us{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+  .icon-btn{display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:12px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.03); border:1px solid #f3e7e4}
+  .icon-btn img{width:28px; height:28px}
+  
+  /* Contact */
+  .contact-row{display:grid; grid-template-columns:1fr 320px; gap:20px}
+  .contact-card{background:#fff; padding:18px; border-radius:12px; border:1px solid #f4e9e6}
+  .field{display:block; width:100%; padding:10px; border-radius:8px; border:1px solid #e9dcd7; margin-bottom:10px; font-size:14px}
+  
+  /* Footer */
+  .site-footer{background:#1f1815; color:#fff; padding:22px 0}
+  .footer-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
+  .footer-credit a{color:#f7e7df; text-decoration:underline}
+  
+  /* WhatsApp floating */
+  .whatsapp-float{position:fixed; right:18px; bottom:18px; z-index:2000; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--whatsapp); box-shadow:0 8px 30px rgba(37,211,102,0.18)}
+  .whatsapp-float img{width:32px; height:32px}
+  
+  /* Lightbox */
+  .lightbox{display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); align-items:center; justify-content:center; z-index:2001; padding:30px}
+  .lightbox img{max-width:92%; max-height:86%; border-radius:10px; box-shadow:0 10px 50px rgba(0,0,0,0.6)}
+  .lb-close{position:absolute; right:20px; top:18px; background:#fff; border-radius:8px; border:none; padding:8px; cursor:pointer}
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width:900px){
+    .hero-inner{flex-direction:column}
+    .hero-right{width:100%}
+    .hero-image{width:100%; height:220px}
+    .contact-row{grid-template-columns:1fr}
+    .nav-menu{position:fixed; right:0; top:72px; width:260px; background:#fff; height:calc(100vh - 72px); transform:translateX(100%); transition:transform .28s ease; flex-direction:column; padding:20px; gap:12px}
+    .nav-menu.open{transform:translateX(0)}
+    .nav-toggle{display:block}
+    .header-socials{display:none}
+  }
+  @media (max-width:520px){
+    .brand-text h1{font-size:18px}
+    .hero-title{font-size:28px}
+  }
+  
